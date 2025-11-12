@@ -1,0 +1,339 @@
+:root {
+  --normal-black: #000;
+  --normal-white: #FFF;
+  --roman-red: #CD0000;
+  --scottish-blue: #0065bd;
+  --scottish-purple: #871F78;
+  --scottish-water: #004b84;
+  --scottish-loch: #6693b5;
+  --scottish-glen: #99b7ce;
+  --scottish-sky:#ccdbe6;
+  --eleganBlue: #427ed1;
+  --lighter-blue: #4c8be0;
+  --darker-yellow: #ffaf00;
+  --coral-red: #FF7F50;
+  --emerald-green: #00C957;
+  --slate-blue: #7171C6;
+  --medium-purple: #8968CD;
+  --midnight-blue: #191970;
+  --aqua: #00FFFF;
+  --ruby-red: #e0115f;
+  --scarlet-red: #ff2400;
+  --JavaScript-yellow: #F5D733;
+  --elegantGrey: #3e3e3e;
+  --lightGrey: #4d4d4f;
+  --navy-blue: rgb(0, 22, 51);
+  --lime-green: rgb(166, 207, 66);
+  --midnight-blue: #191970;
+  --forest-green: #228B22;
+  --whole-foods-green: #00674b;
+  --recycling-green: #009900;
+  --pine-green: #01796F;
+  --cognac-brown: #834333;
+  --pine-gold: #dab970;
+  --linen-white: #E9DCC9;
+  --olive-green: #808000;
+  --dark-green: #006400;
+  --pizza-red: #D62828;
+  --pizza-yellow: #F7C531;
+  --pizza-green: #3A5A40;
+  --pizza-beige: #F4E1C1;
+  --pizza-dark: #2E2E2E;
+  --elegant-black: #181818;
+  --smart-grey: #eeeae7;
+  --smart-white: #eeeeec;
+  --wolf-orange: #e06c19;
+  --sword-red: #ff0036;
+  --footer-grey: #595959;
+  --tricsy-grey:#595959;
+  --tricsy-gold: #e6c300;
+  --tricsy-navy: #133854;
+  --tricsy-alabaster: #EDEADE;
+  --tricsy-new-century-gold: #866D4B;
+  --color-background: #f0f2f5; 
+  --color-sidebar-bg: rgb(9, 23, 54); /* New: Dark Navi Blue for entire sidebar */
+  --color-sidebar-top-box: rgb(10, 179, 213); /* New: Bright Cyan for the info box */
+  --color-primary-blue: #007bff; 
+  --color-accent-orange: #ff9800; 
+  --color-text-dark: #333;
+  --color-text-light: #fff;
+  --color-header-border: #ddd;
+  --color-alert-bg: #fff3e0; 
+  --color-alert-border: #ffcc80;
+  --color-jumbotron-overlay: rgba(0, 0, 0, 0.4); 
+}
+
+/* DEFAULT CLASSES */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Spinnaker", cursive;
+  font-style: normal;
+  background-color: var(--normal-black);
+}
+
+/* ALL PURPOSE CLASSES */
+
+.flex {
+  display: flex;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.justify-space-around {
+  justify-content: space-around;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.blur {
+  filter: blur(8px);
+}
+
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+
+/* STICKY SECTION SCROLLING */
+/* STICKY SECTION SCROLLING */
+/* STICKY SECTION SCROLLING */
+/* STICKY SECTION SCROLLING */
+/* STICKY SECTION SCROLLING */
+
+main div.container {
+  position: relative;
+  width: 100%;
+}
+
+main div.container div.section {
+  position: sticky;
+  top:0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--normal-black);
+}
+
+main div.container div.section .content {
+  position: relative;
+  height:100%;
+  width: 100%;
+  position: relative;
+  transition: 1s ease;
+}
+
+main div.container div.section .content h2 {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  font-size: 8em;
+  font-weight: 900;
+  font-style: italic;
+  white-space: nowrap;
+  color:var(--normal-white);
+  z-index: 999;
+}
+
+main div.container div.section .content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--normal-black);
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--scottish-loch), 0 0 40px var(--scottish-loch), 0 0 50px var(--scottish-loch), 0 0 60px var(--scottish-loch), 0 0 70px var(--scottish-loch);
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px var(--scottish-water), 0 0 40px var(--scottish-water), 0 0 50px var(--scottish-water), 0 0 60px var(--scottish-water), 0 0 70px var(--scottish-water), 0 0 80px var(--scottish-water);
+  }
+}
+
+main div.container div.section .content h2:nth-child(2) {
+  color:var(--scottish-blue);
+  animation: animate 1.5s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%, 100% {
+    clip-path: polygon(0 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0 100%);
+  }
+  50% {
+    clip-path: polygon(0 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0 100%);
+  }
+}
+
+/* Inside the div there are 6 div.sections */
+
+/* 1 */
+main div.container div.section:nth-child(1) {
+  background: url(../images/gallery-bohol.jpg);
+  background-size: cover;
+}
+
+/* 2 */
+main div.container div.section:nth-child(2) {
+  background-image: url(../images/gallery-verona.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
+
+/* 3 */
+main div.container div.section:nth-child(3) {
+  background-image: url(../images/gallery-siquijor.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
+
+/* 4 */
+main div.container div.section:nth-child(4) {
+  background-image: url(../images/gallery-rome.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
+
+/* 5 */
+main div.container div.section:nth-child(5) {
+  background-image: url(../images/gallery-baler.jpg);
+  background-size: cover;
+}
+
+/* 6 */
+main div.container div.section:nth-child(6) {
+  background-image: url(../images/gallery-venice.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
+
+/* MOVING BACKGROUND IMAGE ON SCROLL */
+/* MOVING BACKGROUND IMAGE ON SCROLL */
+/* MOVING BACKGROUND IMAGE ON SCROLL */
+/* MOVING BACKGROUND IMAGE ON SCROLL */
+/* MOVING BACKGROUND IMAGE ON SCROLL */
+
+main .jumbotron {
+  margin-top:20em;
+  /* height:3000px; */
+  width: 100%;
+}
+
+main .jumbotron section {
+  position: relative;
+  width: 100%;
+  height:2000px;
+  background-image: url("../images/gallery-background.jpg");
+  background-position: center;
+  background-attachment: fixed;
+}
+
+main .jumbotron article {
+  width: 100%;
+  padding:1em 0em 0em 1em;
+}
+
+main .jumbotron article h1 {
+  font-size: 4em;
+  color: var(--normal-white);
+}
+
+main .jumbotron article p {
+  font-size: 2em;
+  color: var(--normal-white);
+}
+
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+
+
+
+/* MEDIUM - MEDIA QUERY START */
+/* MEDIUM - MEDIA QUERY START */
+/* MEDIUM - MEDIA QUERY START */
+/* MEDIUM - MEDIA QUERY START */
+/* MEDIUM - MEDIA QUERY START */
+
+@media screen and (max-width: 1316px) and (max-width: 1023px) {
+  
+}
+
+/* MEDIUM - MEDIA QUERY END */
+/* MEDIUM - MEDIA QUERY END */
+/* MEDIUM - MEDIA QUERY END */
+/* MEDIUM - MEDIA QUERY END */
+/* MEDIUM - MEDIA QUERY END */
+
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+
+/* SMALL - MEDIA QUERY START */
+/* SMALL - MEDIA QUERY START */
+/* SMALL - MEDIA QUERY START */
+/* SMALL - MEDIA QUERY START */
+/* SMALL - MEDIA QUERY START */
+
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  
+  main {
+    overflow-x: hidden;
+  }
+  
+  main div.container div.section .content h2 {
+    font-size: 4em;
+  }
+  
+  main .jumbotron article h1 {
+    font-size: 2em;
+  }
+  
+  main .jumbotron article p {
+    font-size: 1.5em;
+  }
+  
+  
+}
+
+/* SMALL - MEDIA QUERY START */
+/* SMALL - MEDIA QUERY START */
+/* SMALL - MEDIA QUERY START */
+/* SMALL - MEDIA QUERY START */
+/* SMALL - MEDIA QUERY START */

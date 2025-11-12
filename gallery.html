@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description:" content="XXX">
+  <meta name="keywords:" content="XXX">
+  <meta name="author:" content="Danny Brogno">
+  <!-- GOOGLE FONTS - SPINNAKER -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap" rel="stylesheet">
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- FAVICON -->
+  <link rel="icon" href="images/favicon-picture.png" type="image/favicon">
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- J QUERY -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style-gallery.css">
+  <title>TRICSY TRAVEL GALLERY</title>
+</head>
+  <body>
+    
+    <header>
+    </header>
+    
+    <!-- MAIN START -->
+    <main>
+      
+      <div class="container">
+        
+        <div class="section">
+          <div class="content">
+            <h2>BOHOL</h2>
+            <h2>BOHOL</h2>
+          </div>
+          
+        </div>
+        
+        <div class="section">
+          <div class="content">
+            <h2>VERONA</h2>
+            <h2>VERONA</h2>
+          </div>
+          
+        </div>
+        
+        <div class="section">
+          <div class="content">
+            <h2>SIQUIJOR</h2>
+            <h2>SIQUIJOR</h2>
+          </div>
+        </div>
+        
+        <div class="section">
+          <div class="content">
+            <h2>ROME</h2>
+            <h2>ROME</h2>
+          </div>
+        </div>
+        
+        <div class="section">
+          <div class="content">
+            <h2>BALER</h2>
+            <h2>BALER</h2>
+          </div>
+        </div>
+        
+        <div class="section">
+          <div class="content">
+            <h2>VENICE</h2>
+            <h2>VENICE</h2>
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="jumbotron">
+        
+        <section>
+        </section>
+        
+        <article>
+          
+          <h1>MOVE BACKGROUND ON SCROLL</h1>
+          
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          
+        </article>
+        
+      </div>
+      
+    </main>
+    <!-- MAIN END -->
+    
+    <script type="text/javascript">
+      // scrollImage START
+      function scrollImage() {
+        $(window).scroll(function() {
+          var scroll_position = $(window).scrollTop() / 2;
+          $("main .jumbotron section").css({
+            'background-position-x' : + scroll_position + 'px',
+          })
+        })
+      }
+      // scrollImage END
+      
+      // ----------------------------
+      
+      /* INIT */
+      function init () {
+        scrollImage();
+      };
+      
+      $(document).ready(init);
+    </script>
+    
+  </body>
+</html>
