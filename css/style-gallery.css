@@ -83,8 +83,7 @@ li {
 }
 
 body {
-  font-family: "Spinnaker", cursive;
-  font-style: normal;
+  font-family: "Heebo", cursive;
   background-color: var(--normal-black);
 }
 
@@ -161,6 +160,7 @@ main div.container div.section .content h2 {
   left:50%;
   transform: translate(-50%, -50%);
   font-size: 8em;
+  letter-spacing: 3px;
   font-weight: 900;
   font-style: italic;
   white-space: nowrap;
@@ -170,21 +170,21 @@ main div.container div.section .content h2 {
 
 main div.container div.section .content h2:nth-child(1) {
   color: transparent;
-  -webkit-text-stroke: 2px var(--normal-black);
+  /* -webkit-text-stroke: 2px var(--color-primary-blue); */
   animation: glow 1s ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--scottish-loch), 0 0 40px var(--scottish-loch), 0 0 50px var(--scottish-loch), 0 0 60px var(--scottish-loch), 0 0 70px var(--scottish-loch);
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e68900, 0 0 40px #e68900, 0 0 50px #e68900, 0 0 60px #e68900, 0 0 70px #e68900;
   }
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px var(--scottish-water), 0 0 40px var(--scottish-water), 0 0 50px var(--scottish-water), 0 0 60px var(--scottish-water), 0 0 70px var(--scottish-water), 0 0 80px var(--scottish-water);
+    text-shadow: 0 0 20px #fff, 0 0 30px var(--color-sidebar-bg), 0 0 40px var(--color-sidebar-bg), 0 0 50px var(--color-sidebar-bg), 0 0 60px var(--color-sidebar-bg), 0 0 70px var(--color-sidebar-bg), 0 0 80px var(--color-sidebar-bg);
   }
 }
 
 main div.container div.section .content h2:nth-child(2) {
-  color:var(--scottish-blue);
+  color: var(--color-sidebar-top-box);
   animation: animate 1.5s ease-in-out infinite;
 }
 
@@ -247,7 +247,6 @@ main div.container div.section:nth-child(6) {
 
 main .jumbotron {
   margin-top:20em;
-  /* height:3000px; */
   width: 100%;
 }
 

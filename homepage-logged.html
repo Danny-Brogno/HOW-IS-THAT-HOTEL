@@ -1,153 +1,311 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description:" content="XXX">
-  <meta name="keywords:" content="XXX">
-  <meta name="author:" content="Danny Brogno">
-  <!-- GOOGLE FONTS - Heebo -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
-  <!-- FONT AWESOME -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- FAVICON -->
-  <link rel="icon" href="images/favicon-5-stars.png" type="image/favicon">
-  <!-- J QUERY -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style-homepage.css">
-  <link rel="stylesheet" href="css/splitting.css">
-  <!-- JS -->
-  <script src="js/script-homepage.js"></script>
-  <script src="js/splitting.js"></script>
-  <title>TRICSY TRAVEL LOGGED</title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description:" content="Honest, professional video hotel reviews from Tricsy, an experienced hotelier traveling the world. Find your next hotel and book with confidence.">
+    <meta name="keywords:" content="hotel reviews, video reviews, hotelier, travel, travel platform, Tricsy Travel, honest reviews, luxury hotels, budget hotels, worldwide hotels">
+    <meta name="author:" content="Danny Brogno">
+    <!-- GOOGLE FONTS - Heebo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- FAVICON -->
+    <link rel="icon" href="images/favicon-5-stars.png" type="image/favicon">
+    <!-- J QUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style-homepage.css">
+    <link rel="stylesheet" href="css/splitting.css">
+    <!-- JS -->
+    <script src="js/script-homepage.js"></script>
+    <script src="js/splitting.js"></script>
+    <title>TRICSY TRAVEL LOGGED</title>
+  </head>
+  <body>
     <div class="container">
-        <!-- LEFT NAVIGATION BAR (Now all dark navy background) -->
-        <aside class="sidebar">
-
-            <div class="sidebar-upper">
-              
-              <div class="device-info-box">
-
-                <div class="device-name-bar">
-                  <i class="fas fa-user"></i> 
-                  <span>
-                    Samsung Galaxy A23
-                  </span>
-                  <!-- <span class="battery">20%</span> -->
-                </div>
-
-                <div class="add-device-btn">
-                  <i class="fas fa-video">
-                    Upload New Review
-                  </i>
-                </div>
-              </div>
-              
-              <nav class="main-nav">
-                    <ul>
-                        <li class="active"><i class="fas fa-home"></i> Home</li>
-                        <li><i class="fas fa-compass"></i> Look for a Hotel</li>
-                        <li><i class="fas fa-users"></i> Reviewers' Contact</li>
-                        <li>
-                           <a href="gallery.html" target="_blank">
-                             <i class="fa-solid fa-images"></i>
-                             Gallery
-                           </a>
-                         </li>
-                        <li class="separator"></li>
-                        <li><i class="fas fa-map-marked-alt"></i> Destinations</li>
-                        <li><i class="fas fa-clipboard-list"></i> Review Guide</li>
-                        <li><i class="fas fa-calendar-alt"></i> Trip Calendar</li>
-                        <li><i class="fas fa-chart-line"></i> Global Stats</li>
-                        <li><i class="fas fa-comment-alt"></i> Feedback</li>
-                    </ul>
-                </nav>
-            </div>
-
-
-            <!-- Bottom Ad/Info Section (Still dark navy) -->
-            <div class="sidebar-footer">
-                <p>Better Reviews with the **Review Pro App**</p>
-                <div class="app-links">
-                    <i class="fab fa-apple"></i>
-                    <i class="fab fa-android"></i>
-                </div>
-            </div>
-        </aside>
-
-        <!-- MAIN CONTENT AREA (The rest of the page remains the same) -->
-        <main class="content">
-            <header class="top-header">
-                <div class="header-left">
-                    <h1 class="main-title">Home</h1>
-                </div>
-                
-
-                <div class="header-right">
-                  <span id="welcome-message">
-                    Welcome Tricsy
-                  </span>
-                  <img src="images/maj.png" alt="image-here">
-                    <button class="try-now-btn">
-                      <a href="homepage.html">
-                        Logout
-                      </a>
-                    </button> 
-                    <span class="language">
-                      <i class="fas fa-globe"></i> 
-                      <select id="language-selector" name="language">
-                        <option value="en" lang="en">English</option>
-                        <option value="es" lang="es">Español</option>
-                        <option value="fr" lang="fr">Français</option>
-                        <option value="de" lang="de">Deutsch</option>
-                        <option value="zh" lang="zh">中文</option>
-                      </select>
-                    </span>
-                </div>
-            </header>
-
-            <div class="alert-bar">
-              <a href="#">
-                Subscribe to the newsletter
-              </a>
-              <button class="bind-device-btn">
-                Watch Now
-              </button>
-            </div>
-
-            <section class="jumbotron">
-                <div class="jumbotron-overlay">
-                    <div class="jumbotron-content">
-                        <h2>How Is That Hotel?</h2>
-                        <p class="jumbotron-text" data-splitting>
-                          With a rich past as a Hotelier, Tricsy is now going around the world to give you the honest truth! She rates every location based on its Location, Hygiene, Services, and Staff. Follow her journey and make sure your next booking is the right one.
-                        </p>
-                        <script> Splitting();</script>
-                        <button class="learn-more-btn">
-                          Watch Latest Review
-                        </button>
-                    </div>
-                </div>
-            </section>
-            <script type="text/javascript">
-              
-            </script>
+      <!-- LEFT NAVIGATION BAR (Now all dark navy background) -->
+      <aside class="sidebar">
+        <div class="sidebar-upper">
+          
+          <div class="device-info-box">
             
-            <div class="dashboard-grid">
-                <div class="stat-box app-links-box">
-                    <div class="box-header"><i class="fas fa-film"></i> Latest Video Reviews</div>
-                    <div class="box-content">
-                        <p>**The Grand Hyatt, NYC** - 4.5/5</p>
-                        <p>**Hotel Majestic, Paris** - 3.8/5</p>
-                    </div>
-                </div>
-                <div class="stat-box total-screen-time-box">
-                    <div class="box-header"><i class="fas fa-chart-bar"></i> Total Reviews in 7 Days</div>
-                    <div class="box-content">
-                        <div class="chart-placeholder">Graph Here</div>
+            <div class="device-name-bar">
+              
+              <i class="fas fa-user"></i> 
+              <span>
+                Samsung Galaxy A23
+              </span>
+              <!-- <span class="battery">20%</span> -->
+              
+            </div>
+            
+            <div class="add-device-btn">
+              <i class="fas fa-video">
+                Upload New Review
+              </i>
+            </div>
+            
+          </div>
+          <nav class="main-nav">
+            <ul>
+              <li class="active">
+                <i class="fas fa-home">
+                  <a href="homepage.html">
+                    Home
+                  </a>
+                </i>
+              </li>
+              
+              <li>
+                <i class="fas fa-compass">
+                  <a href="look-for-a-hotel.html">
+                    Look for a Hotel
+                  </a>
+                </i>
+              </li>
+              
+              <li>
+                <i class="fas fa-users">
+                  <a href="reviewers-contacts.html">
+                    Reviewers' Contact
+                  </a>
+                </i>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-images">
+                  <a href="gallery.html" target="_blank">
+                    gallery
+                  </a>
+                </i>
+              </li>
+
+              <li class="separator"></li>
+                    
+              <li>
+                <i class="fas fa-map-marked-alt">
+                  <a href="destinations.html">
+                    Destinations
+                  </a>
+                </i>
+              </li>
+
+              <li>
+                <i class="fas fa-clipboard-list">
+                  <a href="review-guide.html">
+                    Review Guide
+                  </a>
+                </i>
+              </li>
+
+              <li>
+                <i class="fas fa-calendar-alt">
+                  <a href="trip-calendar.html">
+                    Trip Calendar
+                  </a>
+                </i>
+              </li>
+              
+              <li>
+                <i class="fas fa-chart-line">
+                  <a href="global-stats.html">
+                    Global Stats
+                  </a>
+                </i>
+              </li>
+              
+              <li>
+                <i class="fas fa-comment-alt">
+                  <a href="feedback.html">
+                    Feedback
+                  </a>
+                </i>
+              </li>
+              
+            </ul>
+          </nav>
+        </div>
+        <!-- Bottom Ad/Info Section (Still dark navy) -->
+        <div class="sidebar-footer">
+          
+          <p>
+            Better Reviews with the Review Pro App
+          </p>
+          
+          <div class="app-links">
+            <i class="fab fa-apple"></i>
+            <i class="fab fa-android"></i>
+          </div>
+        </div>
+      </aside>
+      <!-- MAIN CONTENT AREA (The rest of the page remains the same) -->
+      <main class="content">
+        <header class="top-header">
+          
+          <div class="header-left">
+            <h1 class="main-title">
+              Home
+            </h1>
+          </div>
+          
+          <div class="header-right">
+            
+            <span id="welcome-message">
+              Welcome Tricsy
+            </span>
+            
+            <img src="images/maj.png" alt="image-here">
+            
+            <button class="try-now-btn">
+              <a href="homepage.html">
+                Logout
+              </a>
+            </button> 
+            
+            <span class="language">
+              <i class="fas fa-globe"></i> 
+                <select id="language-selector" name="language">
+                  <option value="en" lang="en">
+                    English
+                  </option>
+                  <option value="es" lang="es">
+                    Español
+                  </option>
+                  <option value="fr" lang="fr">
+                    Français
+                  </option>
+                  <option value="de" lang="de">
+                    Deutsch
+                  </option>
+                  <option value="zh" lang="zh">
+                    中文
+                  </option>
+                </select>
+              </span>
+          </div>
+        </header>
+        <div class="alert-bar">
+        <a href="#">
+          Subscribe to the newsletter
+        </a>
+        <button class="bind-device-btn">
+          Watch Now
+        </button>
+      </div>
+        <section class="jumbotron">
+          <div class="jumbotron-overlay">
+          
+          <div class="jumbotron-content">
+            
+            <h2>
+              How Is That Hotel?
+            </h2>
+            
+            <p class="jumbotron-text" data-splitting>
+              With a rich past as a Hotelier, 
+              Tricsy is now going around the world to give you the honest truth! 
+              She rates every location based on its Location, Hygiene, Services, and Staff. 
+              Follow her journey and make sure your next booking is the right one.
+            </p>
+            
+            <script> Splitting();</script>
+            
+            <button class="learn-more-btn">
+              Watch Latest Review
+            </button>
+          </div>
+          
+        </div>
+        </section>
+        <div class="dashboard-grid">
+          
+        <div class="stat-box app-links-box">
+
+          <div class="box-header">
+            <i class="fas fa-film">
+              Latest Video Reviews
+            </i>
+          </div>
+          
+          <div class="box-content">
+            <p>
+              The Grand Hyatt, NYC - 4.5/5
+            </p>
+          </div>
+          
+          <div class="box-content">
+            <p>
+              Hotel Majestic, Paris - 3.8/5
+            </p>
+          </div>
+          
+        </div>
+        
+        <div class="stat-box total-screen-time-box">
+          <div class="box-header">
+            <i class="fas fa-chart-bar">
+              Total Reviews in 7 Days (Guest View)
+            </i> 
+          </div>
+        
+          <div class="box-content">
+            <div class="chart-placeholder">
+              Graph Hidden. Log in to see more.
+            </div>
+          </div>
+
+        </div>
+      </div>
+      </main>
+    </div>
+    
+    <!-- LOGIN MODAL (Pop-up) -->
+    <div class="modal-backdrop" id="loginModal">
+      <div class="modal-content">
+        
+        <span class="close-btn" id="closeModal">
+          &times;
+        </span>
+        
+        <h3>
+          Welcome Back, Reviewer!
+        </h3>
+        
+        <form onsubmit="event.preventDefault(); handleLogin();">
+          <div class="form-group">
+            <label for="email">
+              Email Address
+            </label>
+            <input type="email" id="email" required placeholder="Enter your email">
+          </div>
+            
+          <div class="form-group">
+            <label for="password">
+              Password
+            </label>
+            <input type="password" id="password" required placeholder="Enter your password">
+          </div>
+          
+          <button type="submit" class="login-submit-btn">
+            Login
+          </button>
+
+        </form>
+          
+        <div class="modal-footer">
+          <a href="#">
+            Forgot Password?
+          </a> |   
+          <a href="register.html" target="_blank">
+            New User? Register Here!
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

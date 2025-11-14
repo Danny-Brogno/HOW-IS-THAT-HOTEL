@@ -9,7 +9,6 @@ function init () {
  const $openButtons = $('#openModalSidebar, #openModalHeader, #openModalAlert, #openModalAlertLink');
  const $closeButton = $('#closeModal');
 
- // --- ONLY PROCEED IF THE MODAL ELEMENTS EXIST ---
  if ($modal.length && $closeButton.length) {
    
    // Function to close the modal with fadeOut effect (Defined first so openModal can call it if needed)

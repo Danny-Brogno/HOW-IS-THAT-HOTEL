@@ -85,6 +85,44 @@ body {
   background-color: var(--color-background);
 }
 
+/* ALL PURPOSE CLASSES */
+
+.flex {
+  display: flex;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.justify-space-around {
+  justify-content: space-around;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.blur {
+  filter: blur(8px);
+}
+
+/* CONTENT */
+/* CONTENT */
+/* CONTENT */
+
 .container {
   display: flex;
   min-height: 100vh;
@@ -184,20 +222,24 @@ body {
 }
 
 .main-nav li i {
-  margin-right: 10px;
-  width: 20px; 
-  text-align: center;
+  width: 100%; 
+  display: flex;
+}
+
+.main-nav li i a {
+  display: flex;
+  margin-left: 10px;
 }
 
 .main-nav li:hover {
   background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
 }
 
-/* .main-nav li.active {
-    background-color: rgba(255, 255, 255, 0.15);
-    border-left-color: var(--color-sidebar-top-box);
-    font-weight: bold;
-} */
+.main-nav li.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-left-color: lime;
+  font-weight: bold;
+}
 
 .main-nav .separator {
   height: 1px;
