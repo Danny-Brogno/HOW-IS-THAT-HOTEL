@@ -459,9 +459,29 @@ body {
 
 /* --- PLACEHOLDER GRID STYLES --- */
 .dashboard-grid {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 20px;
+  gap: 20px; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard-grid .stat-box.app-links-box {
+  width: calc(80% - 20px);
+}
+
+.stat-box.total-screen-time-box {
+  width: 20%;
+  margin-left: 20px;
+}
+
+.box-content .picture {
+  width:50%;
+  height: 50%;
+  background-image: url("../images/screen1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .stat-box {
