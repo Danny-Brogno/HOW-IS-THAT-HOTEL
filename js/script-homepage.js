@@ -3,6 +3,25 @@
 
 /* INIT */
 function init () {
+  // DROPDOWN MENU
+  function showAndHide() {
+    $(".dropdown").toggleClass("hide");
+    $(".dropdown").toggleClass("menu-on");
+    $(".drop-links").toggleClass("menu-off");
+    $(".alert-bar, .jumbotron, .dashboard-grid").toggleClass("blur");
+  };
+  
+  function leaveMenu() {
+    $(".dropdown").addClass("hide");
+  };
+  
+  $(".fa-bars").click(showAndHide);
+  $(".dropdown").mouseleave(leaveMenu);
+  
+  
+  
+  
+  
  // Selectors for jQuery
  const $modal = $('#loginModal');
  const $openButtons = $('#openModalSidebar, #openModalHeader, #openModalAlert, #openModalAlertLink');

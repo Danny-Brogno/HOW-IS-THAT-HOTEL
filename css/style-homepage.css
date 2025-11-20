@@ -133,7 +133,7 @@ body {
 
 /* --- SIDEBAR (Left Navigation) STYLES --- */
 .sidebar {
-  width: 250px;
+  width: 15%;
   background-color: var(--color-sidebar-bg); /* Apply dark navy to entire bar */
   display: flex;
   flex-direction: column;
@@ -263,6 +263,7 @@ body {
 /* --- MAIN CONTENT STYLES (Unchanged) --- */
 .content {
   flex-grow: 1;
+  width: 85%;
   padding: 20px;
   padding-top: 0;
 }
@@ -467,7 +468,7 @@ body {
   overflow: auto;
 }
 
-.stat-box.app-links-box .box-content {
+.stat-box.app-links-box .box-content.logged {
   border-bottom: 2px solid var(--color-sidebar-top-box);
   padding-bottom: 2em;
 }
@@ -516,7 +517,7 @@ body {
   background-color: #f5f5f5;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   color: #aaa;
   border-radius: 10px;
@@ -654,3 +655,227 @@ body {
 .modal-footer a:hover {
   opacity: 1;
 }
+
+.menu-on {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 350px;
+  width: 150px;
+  background-color: var(--normal-white);
+  border-radius: 10px;
+  z-index: 100;
+  border: 1px solid var(--color-primary-blue);
+  transition: 0.4s;
+}
+
+.menu-off {
+  margin-top: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#invisible-burger {
+  display: none;
+}
+
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+
+/* EXTRA LARGE - MEDIA QUERY START */
+/* EXTRA LARGE - MEDIA QUERY START */
+/* EXTRA LARGE - MEDIA QUERY START */
+/* EXTRA LARGE - MEDIA QUERY START */
+/* EXTRA LARGE - MEDIA QUERY START */
+
+@media screen and (max-width: 1527px) {
+  .sidebar {
+    width: 22%;
+  }
+  
+  .content {
+    width: 78%;
+  }
+  
+  .main-nav li {
+    font-size: 14px;
+  }
+  
+  .dashboard-grid {
+    flex-direction: column;
+  }
+  
+  .dashboard-grid .stat-box.app-links-box,
+  .dashboard-grid .stat-box.total-screen-time-box {
+    width: 100%;
+  }
+  
+}
+
+/* EXTRA LARGE - MEDIA QUERY END */
+/* EXTRA LARGE - MEDIA QUERY END */
+/* EXTRA LARGE - MEDIA QUERY END */
+/* EXTRA LARGE - MEDIA QUERY END */
+/* EXTRA LARGE - MEDIA QUERY END */
+
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+
+/* LARGE - MEDIA QUERY START */
+/* LARGE - MEDIA QUERY START */
+/* LARGE - MEDIA QUERY START */
+/* LARGE - MEDIA QUERY START */
+/* LARGE - MEDIA QUERY START */
+
+@media screen and (max-width: 1316px) and (max-width: 1223px) {
+  .sidebar {
+    width: 25%;
+  }
+  
+  .content {
+    width: 75%;
+  }
+  
+  .main-nav li {
+    font-size: 13px;
+  }
+  
+}
+
+/* LARGE - MEDIA QUERY END */
+/* LARGE - MEDIA QUERY END */
+/* LARGE - MEDIA QUERY END */
+/* LARGE - MEDIA QUERY END */
+/* LARGE - MEDIA QUERY END */
+
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+
+/* MEDIUM - MEDIA QUERY START */
+/* MEDIUM - MEDIA QUERY START */
+/* MEDIUM - MEDIA QUERY START */
+/* MEDIUM - MEDIA QUERY START */
+/* MEDIUM - MEDIA QUERY START */
+
+@media screen and (max-width: 1222px) and (max-width: 754px) {
+  
+  .sidebar {
+    width: 30%;
+  }
+  
+  .content {
+    width: 70%;
+  }
+  
+  .main-nav li {
+    font-size: 12px;
+  }
+}
+
+/* MEDIUM - MEDIA QUERY END */
+/* MEDIUM - MEDIA QUERY END */
+/* MEDIUM - MEDIA QUERY END */
+/* MEDIUM - MEDIA QUERY END */
+/* MEDIUM - MEDIA QUERY END */
+
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+
+/* SMALL - MEDIA QUERY START */
+/* SMALL - MEDIA QUERY START */
+/* SMALL - MEDIA QUERY START */
+/* SMALL - MEDIA QUERY START */
+/* SMALL - MEDIA QUERY START */
+
+@media screen and (max-width: 753px) and (orientation: portrait) {
+  
+  .sidebar,
+  .try-now-btn,
+  #openModalHeader,
+  .language {
+    display: none;
+  }
+  
+  .content {
+    width: 100%;
+  }
+  
+  .jumbotron {
+    height: initial;
+  }
+  
+  #invisible-burger {
+    font-size: 30px;
+    display: block;
+    color: var(--normal-white);
+  }
+  
+  #invisible-burger .drop-links .fa-bars {
+    color:red;
+  }
+
+  #invisible-burger .dropdown {
+    position:relative;
+    padding: 10px;
+  }
+
+  #invisible-burger .dropdown li {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    font-size: 60%;
+    color: var(--normal-black);
+    width: 100%;
+  }
+
+  #invisible-burger .dropdown.menu-on li:hover a {
+    background-color: lime;
+    border-radius: 5px;
+  }
+  
+  #invisible-burger .drop-links {
+    font-size: 30px;
+  }
+  
+  .alert-bar a#openModalAlertLink {
+    margin: 5px 0px;
+  }
+  
+  .alert-bar {
+    padding: 10px 10px;
+  }
+  
+  .alert-bar,
+  .alert-bar-left {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+}
+
+/* SMALL - MEDIA QUERY END */
+/* SMALL - MEDIA QUERY END */
+/* SMALL - MEDIA QUERY END */
+/* SMALL - MEDIA QUERY END */
+/* SMALL - MEDIA QUERY END */
+
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
