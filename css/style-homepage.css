@@ -84,24 +84,32 @@ body {
   background-color: var(--color-background);
 }
 
-body::-webkit-scrollbar {
+/* ALL SCROLLBARS IN THE HOMEPAGE START */
+
+body::-webkit-scrollbar,
+.dashboard-grid .stat-box.total-screen-time-box::-webkit-scrollbar {
   width: 15px;
 }
 
-body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track,
+.dashboard-grid .stat-box.total-screen-time-box::-webkit-scrollbar-track {
   background: var(--color-sidebar-bg);
 }
 
-body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb,
+.dashboard-grid .stat-box.total-screen-time-box::-webkit-scrollbar-thumb {
   background-color: var(--color-primary-blue);
   border-radius: 2px;
   border: 2px solid var(--color-sidebar-top-box);
   transition:0.5s;
 }
 
-body::-webkit-scrollbar-thumb:hover {
+body::-webkit-scrollbar-thumb:hover,
+.dashboard-grid .stat-box.total-screen-time-box::-webkit-scrollbar-thumb:hover {
   background: var(--color-accent-orange);
 }
+
+/* ALL SCROLLBARS IN THE HOMEPAGE END */
 
 /* ALL PURPOSE CLASSES */
 
@@ -481,9 +489,10 @@ body::-webkit-scrollbar-thumb:hover {
 /* SECOND DIV INSIDE */
 .dashboard-grid .stat-box.total-screen-time-box {
   width:50%;
-  height:100%;
+  max-height: 125em;
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
 
 .scroll-top-btn {
@@ -734,12 +743,8 @@ main .jumbotron-container section .container-right .text {
 }
 
 main .jumbotron-container section .container-right .text h2 {
-  font-size: 2.5em;
+  font-size: 1.5em;
   color: var(--color-sidebar-bg);
-}
-
-main .jumbotron-container section .container-right .text h3 {
-  /* font-size: 1.8em; */
 }
 
 main .jumbotron-container section .container-right p {
@@ -747,8 +752,8 @@ main .jumbotron-container section .container-right p {
   margin:0 auto;
   display: flex;
   align-items: center;
-  line-height: 45px;
-  font-size: 1.2em;
+  line-height: 40px;
+  font-size: 1.1em;
 }
 
 main .jumbotron-container section .container-right .btn-container {
