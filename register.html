@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description:" content="Honest, professional video hotel reviews from Tricsy, an experienced hotelier traveling the world. Find your next hotel and book with confidence.">
     <meta name="keywords:" content="hotel reviews, video reviews, hotelier, travel, travel platform, Tricsy Travel, honest reviews, luxury hotels, budget hotels, worldwide hotels">
-    <meta name="author:" content="Danny Brogno">
+    <meta name="author:" content="Danny Brogno">
     <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
     <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- FAVICON -->
-    <link rel="icon" href="images/register.png" type="image/favicon">
+    <link rel="icon" href="images/register.png" type="image/favicon">
     <!-- J QUERY -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="css/sourcesanspro-font.css">
-    <link rel="stylesheet" href="css/style-register.css">
+    <link rel="stylesheet" href="css/style-register.css">
+    <!-- JS -->
+    <script src="js/script-register.js"></script>
     <title>TRICSY TRAVEL REGISTER</title>
   </head>
   <body>
@@ -139,50 +141,5 @@
   			</div>
   		</div>
   	</div>
-  	<script type="text/javascript">
-      
-      // openCity START (Used for switching between Login and Sign Up tabs)
-      function openCity(evt, cityName) {
-        // 1. Hide all tab content elements
-        $('.tabcontent').hide();
-
-        // 2. Remove the 'active' class from all tab link elements
-        $('.tablinks').removeClass('active');
-
-        // 3. Show the specific content panel based on the cityName (the content ID)
-        $('#' + cityName).show();
-
-        // 4. Add the 'active' class to the clicked tab/link
-        // If the function was triggered by a user click (evt exists)
-        if (evt && evt.currentTarget) {
-            $(evt.currentTarget).addClass('active');
-        } else {
-            // If called by the init function (on page load), find the button that links to this content and activate it
-            // This ensures the button is highlighted when the page loads.
-            // In this case, we rely on the specific ID used in the init function below.
-            $('.tablinks[onclick*="' + cityName + '"]').addClass('active');
-        }
-      }
-      // openCity END
-
-      // ----------------------------
-
-      /* INIT */
-      function init() {
-        // --- SET DEFAULT TO 'SIGN UP' ---
-        // Using the ACTUAL IDs from register.html:
-        const signUpContentID = 'sign-up';     // ID of the Sign Up content div
-        const signUpButtonID = 'defaultOpen'; // ID of the Sign Up button
-        
-        // 1. Force the Sign Up content panel to open on load
-        openCity(null, signUpContentID); 
-
-        // 2. Force the 'active' class onto the Sign Up button for highlighting
-        $("#" + signUpButtonID).addClass('active'); 
-      };
-
-      $(document).ready(init);
-      
-  	</script>
   </body>
 </html>

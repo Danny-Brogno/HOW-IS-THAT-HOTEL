@@ -84,6 +84,25 @@ body {
   background-color: var(--color-background);
 }
 
+body::-webkit-scrollbar {
+  width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--color-sidebar-bg);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary-blue);
+  border-radius: 2px;
+  border: 2px solid var(--color-sidebar-top-box);
+  transition:0.5s;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-orange);
+}
+
 /* ALL PURPOSE CLASSES */
 
 .flex {
@@ -295,7 +314,7 @@ body {
   justify-content: center;
 }
 
-.header-right span:first-of-type#welcome-message {
+.header-right span:first-of-type.welcome-message {
   font-weight: bold;
   margin-right: 10px;
 }
@@ -462,10 +481,30 @@ body {
 /* SECOND DIV INSIDE */
 .dashboard-grid .stat-box.total-screen-time-box {
   width:50%;
-  height:20em;
+  height:100%;
   display: flex;
   flex-direction: column;
-  overflow: auto;
+}
+
+.scroll-top-btn {
+  width: 95%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 1em auto 1em auto;
+}
+
+.scroll-top-btn ul {
+  font-size: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  border: 2px solid var(--color-sidebar-bg);
+  color: var(--color-sidebar-bg);
 }
 
 .stat-box.app-links-box .box-content.logged {
@@ -479,13 +518,12 @@ body {
 
 .box-content .picture {
   width:100%;
-  height: 400px;
+  height: 500px;
   cursor: pointer;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 10px;
-  
 }
 
 .box-content .picture.one {
@@ -540,6 +578,375 @@ body {
   transition: background-color 0.2s;
 }
 
+/* BANNER START*/
+/* BANNER START*/
+/* BANNER START*/
+/* BANNER START*/
+/* BANNER START*/
+
+main .banner {
+  width:100%;
+  height:400px;
+  margin:100px 0px 0px 0px;
+  background-image: linear-gradient(-45deg, var(--color-sidebar-bg), var(--color-sidebar-top-box), var(--color-primary-blue), var(--color-accent-orange));
+  background-size: 400% 400%;
+  animation: gradient 7s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+main .banner .top {
+  height:20%;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top:20px;
+}
+
+main .banner .top h2 {
+  color: var(--normal-white);
+  font-size: 2em;
+}
+
+main .banner section.banner-section {
+  width:90%;
+  height:80%;
+  margin:0 auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+main .banner section.banner-section div {
+  width:100%;
+  height:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main .banner section.banner-section .one img,
+main .banner section.banner-section .two img,
+main .banner section.banner-section .three img,
+main .banner section.banner-section .four img,
+main .banner section.banner-section .five img {
+  width: 90%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:3px solid var(--color-sidebar-top-box);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/* ------------------- */
+/* ------------------- */
+/* ------------------- */
+
+/* CONTAINER START*/
+/* CONTAINER START*/
+/* CONTAINER START*/
+/* CONTAINER START*/
+/* CONTAINER START*/
+
+main .jumbotron-container {
+  width: 100%;
+  height: 500px;
+  min-height: 500px;
+  margin-top: 100px;
+}
+
+main .jumbotron-container section {
+  width:90%;
+  height:100%;
+  margin:0 auto;
+  display: flex;
+}
+
+main .jumbotron-container section .container-left {
+  width:50%;
+  height: 100%;
+}
+
+/* just in one section */
+main .jumbotron-container section .container-left img {
+  height:100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+main .jumbotron-container section .container-left .slider {
+  width:100%;
+  height:100%;
+  padding:5px;
+  box-shadow: 0 0 20px rgba(0,0,0,1);
+  position:relative;
+ }
+ 
+main .jumbotron-container section .container-left .slider .slide {
+  list-style:none;
+}
+
+main .jumbotron-container section .container-left .slider > li {
+  position:absolute;
+  top:5px;
+  left:5px;
+  right:5px;
+  bottom:5px;
+}
+
+main .jumbotron-container section .container-left .slider .slide img {
+  height: 100%;
+  width:100%;
+  border-radius: 10px;
+}
+
+main .jumbotron-container section .container-right {
+  width:50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main .jumbotron-container section .container-right .text {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main .jumbotron-container section .container-right .text h2 {
+  font-size: 2.5em;
+  color: var(--color-sidebar-bg);
+}
+
+main .jumbotron-container section .container-right .text h3 {
+  /* font-size: 1.8em; */
+}
+
+main .jumbotron-container section .container-right p {
+  width:90%;
+  margin:0 auto;
+  display: flex;
+  align-items: center;
+  line-height: 45px;
+  font-size: 1.2em;
+}
+
+main .jumbotron-container section .container-right .btn-container {
+  width:90%;
+  display: flex;
+  align-items: flex-end;
+  margin:0 auto;
+}
+
+
+main .jumbotron-container section .container-right .btn-container a {
+  padding:1em 6em;
+  background-color: var(--color-sidebar-top-box);
+  color: var(--normal-white);
+  border-radius: 10px;
+  transition:0.5s;
+}
+
+main .jumbotron-container section .container-right .btn-container a:hover {
+  background-color: var(--color-primary-blue);
+}
+
+/* CONTAINER END*/
+/* CONTAINER END*/
+/* CONTAINER END*/
+/* CONTAINER END*/
+/* CONTAINER END*/
+
+/* The Overlay (background) */
+
+main .banner .contact-now {
+  font-size: 2em;
+  color: var(--color-accent-orange);
+  padding: 1em 0.5em;
+  cursor:pointer;
+}
+
+main .banner .overlay {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden; 
+  transition: 0.5s; 
+}
+
+/* Position the content inside the overlay */
+main .banner .overlay-content {
+ position: relative;
+ display: flex;
+ justify-content: center;
+ top:13%;
+ width: 100%;
+ margin-top: 30px; 
+}
+
+/* ------------------- */
+/* ------------------- */
+/* ------------------- */
+
+/* IN THE CONTAINER INSIDE THERE ARE 3 SECTIONS */
+main .banner .overlay-content .inside {
+  width:1000px;
+  height:700px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-primary-blue);
+  color: var(--normal-white);
+  border-radius: 10px;
+}
+
+main .banner .overlay-content .inside section {
+  width:90%;
+  margin:0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 1 - WHERE THE TITLE IS */
+main .banner .overlay-content .inside section:first-of-type {
+  height:15%;
+}
+
+/* 2 - WHERE THE INPUTS ARE */
+main .banner .overlay-content .inside section:nth-child(2) {
+  height:70%;
+  flex-direction: row;
+}
+
+main .banner .overlay-content .inside section:nth-child(2) .left {
+  height:100%;
+  width:50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+main .banner .overlay-content .inside section:nth-child(2) .left .upper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 20%;
+  width: 70%;
+}
+
+main .banner .overlay-content .inside section:nth-child(2) .left .upper label {
+  font-size: 1.5em;
+}
+
+main .banner .overlay-content .inside section:nth-child(2) .left .upper select {
+  height: 30px;
+  width: 100%;
+}
+
+main .banner .overlay-content .inside section:nth-child(2) .left .lower {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 70%;
+}
+
+main .banner .overlay-content .inside section:nth-child(2) .left .lower textarea {
+  height:80%;
+  width:100%;
+  padding:10px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+
+main .banner .overlay-content .inside section:nth-child(2) .right {
+  height:100%;
+  width:50%;
+  display: flex;
+  flex-direction: column;
+}
+
+main .banner .overlay-content .inside section:nth-child(2) .right div {
+  width: 100%;
+  height: calc(100% / 3);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main .banner .overlay-content .inside section:nth-child(2) .right div label {
+  font-size: 1.5em;
+  width:100%;
+  margin-bottom: 20px;
+}
+
+main .banner .overlay-content .inside section:nth-child(2) .right div input {
+  width:100%;
+  height:30px;
+  padding:10px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+
+/* 3 - WHERE THE BUTTON IS */
+main .banner .overlay-content .inside section:last-of-type {
+  height:15%;
+}
+
+main .banner .overlay-content .inside section:last-of-type button {
+  padding:1.3em 6em;
+  background-color: var(--color-sidebar-top-box);
+  color:var(--normal-white);
+  font-size: 1.2em;
+  border:none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+main .banner .overlay-content .inside section:last-of-type button:hover {
+  background-color: var(--color-accent-orange);
+}
+
+/* Position the close button (top right corner) */
+main .banner .overlay .closebtn {
+ position: absolute;
+ top: 20px;
+ right: 45px;
+ font-size: 6em;
+ color: var(--color-accent-orange);
+}
 
 /* --- MODAL STYLES --- */
 
@@ -550,37 +957,32 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
-  display: none; /* Hidden by default, controlled by JS */
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none; 
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  /* Initial state for fade-in effect */
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
 
-/* Class added by JS to show the modal with transition */
 .modal-backdrop.is-visible {
   opacity: 1;
 }
 
-/* The actual login form box */
 .modal-content {
-  background-color: var(--color-sidebar-top-box); /* Requested color */
-  color: var(--color-text-light); /* Requested color */
+  background-color: var(--color-sidebar-top-box); 
+  color: var(--color-text-light); 
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   width: 90%;
   max-width: 400px;
   position: relative;
-  /* Initial state for subtle pop-up effect */
   transform: translateY(-20px);
   transition: transform 0.3s ease-in-out;
 }
 
-/* When the modal is visible, bring content to final position */
 .modal-backdrop.is-visible .modal-content {
   transform: translateY(0);
 }
@@ -600,7 +1002,6 @@ body {
   color: var(--color-text-light);
 }
 
-/* Form Grouping and Inputs */
 .form-group {
   margin-bottom: 15px;
 }
@@ -617,13 +1018,13 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
-  color: var(--color-text-dark); /* Ensure text is readable */
+  color: var(--color-text-dark); 
 }
 
 .login-submit-btn {
   width: 100%;
-  background-color: var(--color-primary-blue); /* Requested color */
-  color: var(--color-text-light); /* Requested color */
+  background-color: var(--color-primary-blue); 
+  color: var(--color-text-light); 
   border: none;
   padding: 12px;
   border-radius: 5px;
@@ -635,10 +1036,9 @@ body {
 }
 
 .login-submit-btn:hover {
-  background-color: #0056b3; /* Darker shade for hover */
+  background-color: #0056b3; 
 }
 
-/* Footer Links */
 .modal-footer {
   margin-top: 20px;
   text-align: center;
@@ -646,7 +1046,7 @@ body {
 }
 
 .modal-footer a {
-  color: var(--color-text-light); /* White link text */
+  color: var(--color-text-light); 
   text-decoration: underline;
   opacity: 0.8;
   transition: opacity 0.2s;
@@ -681,6 +1081,8 @@ body {
 #invisible-burger {
   display: none;
 }
+
+
 
 /* ------------------------------------------- */
 /* ------------------------------------------- */

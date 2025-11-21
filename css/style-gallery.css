@@ -83,7 +83,7 @@ li {
 
 body {
   font-family: "Heebo", cursive;
-  background-color: var(--normal-black);
+  background-color: var(--color-primary-blue);
 }
 
 /* ALL PURPOSE CLASSES */
@@ -265,12 +265,81 @@ main .jumbotron article {
 
 main .jumbotron article h1 {
   font-size: 4em;
-  color: var(--normal-white);
+  color: var(--color-sidebar-bg);
 }
 
 main .jumbotron article p {
   font-size: 2em;
+  color: var(--color-sidebar-bg);
+}
+
+/* NAVBAR THAT SCROLL DOWN */
+/* NAVBAR THAT SCROLL DOWN */
+/* NAVBAR THAT SCROLL DOWN */
+
+#navbar {
+  background-color: var(--color-sidebar-bg);
+  position: fixed;
+  top: -50px;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  z-index: 10;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: var(--color-text-light);
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+#navbar a:hover {
+  background-color: var(--color-primary-blue);
+  color: var(--color-sidebar-top-box);
+}
+
+header.logged #navbar {
+}
+
+header.logged #navbar .nav-right,
+header.logged #navbar .nav-right .welcome-message {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   color: var(--normal-white);
+}
+
+header.logged #navbar .nav-right img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0px 15px;
+}
+
+.scroll-top-btn {
+  width: 95%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 1em auto 1em auto;
+}
+
+.scroll-top-btn ul {
+  font-size: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  border: 2px solid var(--color-sidebar-bg);
+  color: var(--color-sidebar-bg);
 }
 
 /* ------------------------------------------- */
