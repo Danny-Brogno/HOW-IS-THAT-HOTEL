@@ -87,17 +87,20 @@ body {
 /* ALL SCROLLBARS IN THE HOMEPAGE START */
 
 body::-webkit-scrollbar,
-.dashboard-grid .stat-box.total-screen-time-box::-webkit-scrollbar {
+.dashboard-grid .stat-box.total-screen-time-box::-webkit-scrollbar,
+.dashboard-grid .stat-box.app-links-box::-webkit-scrollbar {
   width: 15px;
 }
 
 body::-webkit-scrollbar-track,
-.dashboard-grid .stat-box.total-screen-time-box::-webkit-scrollbar-track {
+.dashboard-grid .stat-box.total-screen-time-box::-webkit-scrollbar-track,
+.dashboard-grid .stat-box.app-links-box::-webkit-scrollbar-track {
   background: var(--color-sidebar-bg);
 }
 
 body::-webkit-scrollbar-thumb,
-.dashboard-grid .stat-box.total-screen-time-box::-webkit-scrollbar-thumb {
+.dashboard-grid .stat-box.total-screen-time-box::-webkit-scrollbar-thumb,
+.dashboard-grid .stat-box.app-links-box::-webkit-scrollbar-thumb {
   background-color: var(--color-primary-blue);
   border-radius: 2px;
   border: 2px solid var(--color-sidebar-top-box);
@@ -105,7 +108,8 @@ body::-webkit-scrollbar-thumb,
 }
 
 body::-webkit-scrollbar-thumb:hover,
-.dashboard-grid .stat-box.total-screen-time-box::-webkit-scrollbar-thumb:hover {
+.dashboard-grid .stat-box.total-screen-time-box::-webkit-scrollbar-thumb:hover,
+.dashboard-grid .stat-box.app-links-box::-webkit-scrollbar-thumb:hover {
   background: var(--color-accent-orange);
 }
 
@@ -484,12 +488,14 @@ body::-webkit-scrollbar-thumb:hover,
 /* FIRST DIV INSIDE */
 .dashboard-grid .stat-box.app-links-box {
   width: calc(50% - 20px);
+  max-height: 120em;
+  overflow: auto;
 }
 
 /* SECOND DIV INSIDE */
 .dashboard-grid .stat-box.total-screen-time-box {
   width:50%;
-  max-height: 125em;
+  max-height: 120em;
   display: flex;
   flex-direction: column;
   overflow: auto;
@@ -1067,7 +1073,7 @@ main .banner .overlay .closebtn {
   justify-content: space-around;
   align-items: flex-start;
   height: 350px;
-  width: 150px;
+  width: 200px;
   background-color: var(--normal-white);
   border-radius: 10px;
   z-index: 100;
@@ -1218,14 +1224,175 @@ main .banner .overlay .closebtn {
     display: none;
   }
   
+  .top-header .header-right span.welcome-message,
+  .top-header .header-right img[src="images/maj.png"] {
+    display: none;
+  }
+  
+  /* Add this inside your mobile media query to ensure visibility */
+  .dropdown.menu-on li:first-child .welcome-message,
+  .dropdown.menu-on li:first-child img {
+    /* Ensure the individual elements inside the li are not hidden */
+    display: block !important; 
+    visibility: visible !important;
+  }
+  
   .content {
     width: 100%;
   }
+  
+  /* JUMBOTRON START */
   
   .jumbotron {
     height: initial;
   }
   
+  .dashboard-grid .stat-box.app-links-box {
+    overflow: initial;
+    height:initial;
+  }
+  
+  .dashboard-grid .stat-box.total-screen-time-box {
+    
+  }
+  
+  .jumbotron-content h2 {
+    font-size: 30px;
+  }
+  
+  .jumbotron-content p.jumbotron-text {
+    font-size: 20px;
+  }
+  
+  .learn-more-btn {
+    font-size: 15px;
+  }
+  
+  .box-content .picture {
+    height: 200px;
+  }
+  
+  /* JUMBOTRON START */
+  
+  /* BANNER START */
+  
+  main .banner {
+    height:initial;
+    margin:50px 0px 0px 0px;
+  }
+  
+  main .banner .top h2 {
+    text-align: center;
+  }
+  
+  main .banner section.banner-section {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  main .banner .contact-now {
+    font-size: 1em;
+    padding:0;
+  }
+  
+  .chart-placeholder h2 {
+    font-size: 0.9em;
+  }
+  
+  .chart-placeholder p {
+    font-size: 0.7em;
+  }
+  
+  /* BANNER END */
+  
+  /* jumbotron-container START */
+  
+  main .jumbotron-container {
+    width: 100%;
+    height: initial;
+    min-height: initial;
+    margin-top: 50px;
+  }
+  
+  main .jumbotron-container section {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  main .jumbotron-container section .container-right .text,
+  main .jumbotron-container section .container-right p {
+    width: 100%;
+  }
+  
+  main .jumbotron-container section .container-left,
+  main .jumbotron-container section .container-right {
+    width: 100%;
+    height: initial;
+    margin-top:2em;
+  }
+  
+  main .jumbotron-container section .container-left .slider {
+    height: 300px;
+  }
+  
+  /* jumbotron-container END */
+  
+  /* POPUP START */
+  
+  main .banner .overlay-content {
+    top: 6%;
+    margin-top: 0;
+  }
+  
+  main .banner .overlay-content .inside {
+    height:initial;
+    width: 90%;
+  }
+  
+  main .banner .overlay-content .inside section:nth-child(2) {
+    flex-direction: column;
+    height:initial;
+  }
+  
+  main .banner .overlay-content .inside section:first-of-type,
+  main .banner .overlay-content .inside section:nth-child(2) .left,
+  main .banner .overlay-content .inside section:nth-child(2) .left .upper,
+  main .banner .overlay-content .inside section:nth-child(2) .left .lower,
+  main .banner .overlay-content .inside section:nth-child(2) .right {
+    width: 100%;
+    height:initial;
+  }
+  
+  main .banner .overlay-content .inside section:last-of-type {
+    height: initial;
+    margin: 2em 0em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  main .banner .overlay .closebtn {
+    top: 0;
+    right: 0;
+    font-size: 3em;
+  }
+  
+  main .banner .overlay-content .inside section:nth-child(2) .left .upper label {
+    margin: 1em 0em;
+  }
+  
+  main .banner .overlay-content .inside section:nth-child(2) .left .upper select,
+  main .banner .overlay-content .inside section:nth-child(2) .left .lower textarea {
+    margin-bottom: 1em;
+  }
+  
+  main .banner .overlay-content .inside .big h2 {
+    font-size: 1.5em;
+  }
+  /* POPUP END */
+  
+  /* HAMBURGER MENU START */
   #invisible-burger {
     font-size: 30px;
     display: block;
@@ -1264,6 +1431,10 @@ main .banner .overlay .closebtn {
     margin: 5px 0px;
   }
   
+  /* HAMBURGER MENU END */
+  
+  /* ALERT BAR START (under header) */
+  
   .alert-bar {
     padding: 10px 10px;
   }
@@ -1273,6 +1444,8 @@ main .banner .overlay .closebtn {
     flex-direction: column;
     align-items: flex-start !important;
   }
+  
+  /* ALERT BAR END (under header) */
 }
 
 /* SMALL - MEDIA QUERY END */
