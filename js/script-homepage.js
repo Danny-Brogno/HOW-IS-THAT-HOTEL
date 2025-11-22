@@ -112,8 +112,8 @@ function init () {
   // MAIN AUTOMATIC CAROUSEL END
   
   // ----------------------------------
-  
-   // Selectors for jQuery
+
+   // MODAL START - LOGIN POPUP - START
    const $modal = $('#loginModal');
    const $openButtons = $('#openModalSidebar, #openModalHeader, #openModalAlert, #openModalAlertLink');
    const $closeButton = $('#closeModal');
@@ -173,6 +173,10 @@ function init () {
        }
      }
    }
+  // MODAL START - LOGIN POPUP - START
+  
+  // ----------------------------------
+  
 };
 
 $(document).ready(init);
